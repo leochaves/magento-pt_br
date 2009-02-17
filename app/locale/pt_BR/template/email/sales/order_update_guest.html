@@ -1,0 +1,36 @@
+<!--@subject {{var order.getStoreGroupName()}}: Pedido nº {{var order.increment_id}} atualizado @-->
+<style type="text/css">body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }</style>
+<div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
+<table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+<tr>
+    <td align="center" valign="top">
+        <!-- [ header starts here] -->
+        <table cellspacing="0" cellpadding="0" border="0" width="650">
+        <tr>
+            <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px;" border="0"/></a></td>
+        </tr>
+        </table>
+
+        <!-- [ middle starts here] -->
+        <table cellspacing="0" cellpadding="0" border="0" width="650">
+        <tr>
+            <td valign="top">
+                <p>
+                    <strong>Caro(a) {{var billing.getName()}}</strong>,<br/>
+					Seu Pedido nº {{var order.increment_id}} foi <br/>
+                    <strong>{{var order.getStatusLabel()}}</strong>.
+                </p>
+                <p>{{var comment}}</p>
+                <p>
+                    Se tiver qualquer dúvida, sinta-se à vontade para entrar em contato pelo
+                    <a href="pedidos@designdesuperficie.com" style="color:#1E7EC8;">pedidos@designdesuperficie.com</a> 
+                    ou pelo telefone (47) 3363-6079.
+                </p>
+                <p>Obrigado novamente,<br/><strong>{{var order.getStoreGroupName()}}</strong></p>
+            </td>
+        </tr>
+        </table>
+    </td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,47 @@
+<!--@subject Bem-vindo, {{var customer.name}}! @-->
+
+<style type="text/css">
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+</style>
+
+<div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
+    <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+        <tr>
+            <td align="center" valign="top">
+                <!-- [ header starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px;" border="0"/></a></td>
+                    </tr>
+                </table>
+
+                <!-- [ middle starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <p><strong>Caro(a) {{var customer.name}}</strong>,<br/>
+                            Bem-vindo à Mirago. Para efetuar o login ao visitar nosso site basta clicar em <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">Login</a> ou <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">Minha conta</a> no menu superior (a direita) de toda página e entrar com seu e-mail e senha.</p>
+
+                            <p>Quando acessar sua conta, você poderá realizar as seguintes ações:</p>
+
+                            <ul>
+                                <li>Fechar seu pedido mais rapidamente ao fazer uma compra</li>
+                                <li> Checar o status de suas compras</li>
+                                <li>Ver pedidos anteriores</li>
+                                <li> Alterar as informações de sua conta</li>
+                                <li>Alterar sua senha</li>
+                            </ul>
+
+                            <p>Caso tenha alguma dúvida sobre sua conta ou qualquer outra dúvida, por favor sinta-se a vontade para entrar em contato através do <a href="mailto:contato@mirago.com.br" style="color:#1E7EC8;">contato@mirago.com.br</a>.</p>
+                            <p>Obrigado!</p>
+
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>

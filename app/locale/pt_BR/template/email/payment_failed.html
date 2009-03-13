@@ -1,0 +1,58 @@
+{* This is a comment block
+
+Use vars: {{var var_name}}
+*}<!--@subject Lembrete de pagamento não realizado @-->
+
+<table>
+    <thead>
+        <tr>
+            <th>O pagamento não pode ser realizado.</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p>
+                    <b>Motivo:</b><br />
+                    {{var reason}}
+                </p>
+                <p>
+                    <b>Tipo de pagamento</b><br />
+                    {{var checkoutType}}
+                </p>
+                <p>
+                    <b>Consumidor:</b><br />
+                    <a href="mailto:{{var customerEmail}}">{{var customer}}</a> &lt;{{var customerEmail}}&gt;
+                </p>
+                <p>
+                    <b>Itens</b><br />
+                    {{var items}}
+                </p>
+                <p>
+                    <b>Total:</b><br />
+                    {{var total}}
+                </p>
+                <p>
+                    <b>Endereço de cobrança:</b><br />
+                    {{var billingAddress.format('html')}}
+                </p>
+                <p>
+                    <b>Endereço de entrega:</b><br />
+                    {{var shippingAddress.format('html')}}
+                </p>
+                <p>
+                    <b>Método de entrega:</b><br />
+                    {{var shippingMethod}}
+                </p>
+                <p>
+                    <b>Método de pagamento:</b><br />
+                    {{var paymentMethod}}
+                </p>
+                <p>
+                    <b>Data e Hora:</b><br />
+                    {{var dateAndTime}}
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>

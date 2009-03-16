@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Short description
+ *
+ * Long description
+ *
+ *
+ * Copyright 2008, Renan Gonçalves <renan.saddam@gmail.com>
+ * Licensed under The MIT License
+ * Redistributions of files must retain the copyright notice.
+ *
+ * @copyright       Copyright 2008, Renan Gonçalves
+ * @category        Cushy
+ * @package         Cushy_Boleto
+ * @license         http://www.opensource.org/licenses/mit-license.php The MIT License
+ */
+-->
+<config>
+	<modules>
+		<Cushy_Boleto>
+			<version>0.1.0</version>
+			<depends>
+				<Mage_Payment />
+			</depends>
+		</Cushy_Boleto>
+	</modules>
+	<global>
+		<models>
+			<boleto>
+				<class>Cushy_Boleto_Model</class>
+			</boleto>
+		</models>
+		<resources>
+			<connection>
+				<use>core_setup</use>
+			</connection>
+		</resources>
+	</global>
+	<frontend>
+		<routers>
+			<boleto>
+				<use>standard</use>
+				<args>
+					<module>Cushy_Boleto</module>
+					<frontName>boleto</frontName>
+				</args>
+			</boleto>
+		</routers>
+	</frontend>
+	<default>
+		<payment>
+			<boleto_bb>
+				<active>0</active>
+				<model>Cushy_Boleto_Model_Bb</model>
+				<title>Boleto Bancário - Banco do Brasil</title>
+				<due_date>5</due_date>
+			</boleto_bb>
+			<boleto_bradesco>
+				<active>0</active>
+				<model>Cushy_Boleto_Model_Bradesco</model>
+				<title>Boleto Bancário - Bradesco</title>
+				<due_date>5</due_date>
+			</boleto_bradesco>
+			<boleto_itau>
+				<active>0</active>
+				<model>Cushy_Boleto_Model_Itau</model>
+				<title>Boleto Bancário - Banco Itaú</title>
+				<due_date>5</due_date>
+			</boleto_itau>
+			<boleto_real>
+				<active>0</active>
+				<model>Cushy_Boleto_Model_Real</model>
+				<title>Boleto Bancário - Banco Real</title>
+				<due_date>5</due_date>
+			</boleto_real>
+		</payment>		
+	</default>
+</config>

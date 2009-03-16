@@ -42,6 +42,19 @@
     <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
     <?php endif;?>
     <?php echo $this->getChildHtml() ?>
+
+  <!-- Start Cushy_Boleto code -->
+  <?php
+  $order = Mage::getModel('sales/order');
+  $order->loadByIncrementId($this->getOrderId());
+
+  $method = $order->getPayment()->getMethod();
+  if (strpos($method, 'boleto_') !== false) {
+    echo '<br /><br />';
+    echo $this->__('Clique <a href="%s" onclick="this.target=\'_blank\'">aqui para imprimir</a> o boleto bancário.', $this->getUrl('boleto/standard/view/order_id/' . $order->getId()));
+  }
+  ?>
+  <!-- Finish Cushy_Boleto code -->
 </p>
 <div class="button-set">
     <button class="form-button" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><?php echo $this->__('Continue Shopping') ?></span></button>
